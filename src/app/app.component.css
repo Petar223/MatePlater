@@ -12,6 +12,11 @@ mat-sidenav {
   font-family: "Notable";
 }
 
+.mate-logo-title {
+  margin-bottom: 6px;
+    color: gold
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -31,5 +36,9 @@ a:active {
 .mate-nav-caption {
   display: inline-block;
   padding-left: 6px;
+  height: 30px;
 }
 
+.mate-signup, .mate-login {
+  font-size: 15px;
+}
