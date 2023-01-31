@@ -1,0 +1,44 @@
+mat-sidenav-container,
+mat-sidenav-content,
+mat-sidenav{
+  height: 100%;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+
+.mate-logo {
+  font-family: "Notable";
+}
+
+.mate-logo-title {
+  margin-bottom: 6px;
+    color: gold
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+
+.mate-navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mate-nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+  height: 30px;
+}
+
+.mate-signup, .mate-login {
+  font-size: 15px;
+}
