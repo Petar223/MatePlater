@@ -1,1 +1,77 @@
-<p>groceries works!</p>
+<div fxFlex
+     fxLayout="row wrap"
+     fxLayoutAlign="center"
+     class="mate-card-container"
+     fxHide.xs
+     *ngIf="!loading">
+  <mat-card *ngFor="let category of categories" class="category-card"
+            [ngStyle]="{'background-color': getColor(category.category_importance)}">
+    <img class="img" mat-card-image [src]="getImage(category.icon_image)"
+         alt="{{category.food_category_name}}">
+    <mat-card-content>
+      <p class="p" mat-card-title>{{category.food_category_name.toUpperCase()}}</p>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="end center">
+      <button mat-raised-button
+              (click)="goToCategory(category)">Go to Category
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div fxFlex
+     fxLayout="row wrap"
+     fxLayoutAlign="center"
+     class="mate-card-container"
+     fxHide.sm
+     fxHide.md
+     fxHide.lg
+     fxHide.xl
+     *ngIf="!loading">
+  <mat-card *ngFor="let category of categories" class="category-card-xs"
+            [ngStyle]="{'background-color': getColor(category.category_importance)}">
+    <img class="img-xs" mat-card-image [src]="getImage(category.icon_image)"
+         alt="{{category.food_category_name}}">
+    <mat-card-content>
+      <p class="p-xs" mat-card-title>{{category.food_category_name.toUpperCase()}}</p>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="end center">
+      <button mat-raised-button
+              (click)="goToCategory(category)">Go to Category
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div fxFlex
+     fxHide.xs
+     fxLayout="row wrap"
+     fxLayoutAlign="start"
+     class="mate-card-container"
+     *ngIf="loading">
+  <div style="padding: 10px;">
+    <ngx-skeleton-loader
+      count="10"
+      animation="pulse"
+      [theme]="skeletonLoaderCardStyle"
+    ></ngx-skeleton-loader>
+  </div>
+</div>
+
+<div fxFlex
+     fxHide.sm
+     fxHide.md
+     fxHide.lg
+     fxHide.xl
+     fxLayout="row wrap"
+     fxLayoutAlign="start"
+     class="mate-card-container"
+     *ngIf="loading">
+  <div style="padding: 10px;">
+    <ngx-skeleton-loader
+      count="10"
+      animation="pulse"
+      [theme]="skeletonLoaderCardStyleXs"
+    ></ngx-skeleton-loader>
+  </div>
+</div>
