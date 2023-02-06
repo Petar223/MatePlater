@@ -37,6 +37,11 @@ a:active {
   display: inline-block;
   padding-left: 6px;
   height: 30px;
+  letter-spacing: 5px;
+}
+
+.mate-a-sidenav {
+  letter-spacing: 5px;
 }
 
 .mate-signup, .mate-login {
